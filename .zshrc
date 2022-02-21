@@ -1,5 +1,16 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
 export ZSH="/home/schni/.oh-my-zsh"
-#ZSH_THEME="agnoster"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,7 +111,7 @@ command -v gotop &> /dev/null && alias gotoptop='gotop -p'
 
 
 function mkcd() {
-	mkdir -p "$1" && cd "$1"
+        mkdir -p "$1" && cd "$1"
 }
 
 function lazygit() {
@@ -110,9 +121,6 @@ function lazygit() {
     git push origin HEAD
 }
 
-export PIN_ROOT=/opt/pin-3.10-97971-gc5e41af74-gcc-linux
-export PATH=$PATH:/home/schni/.gem/ruby/2.6.0/bin
-
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -120,8 +128,6 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-
-source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
