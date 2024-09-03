@@ -37,7 +37,6 @@ brew install sketchybar
 brew install borders
 
 ### Terminal
-brew install starship
 brew install zoxide
 
 ### Nice to have
@@ -53,10 +52,11 @@ brew install nano
 brew unlink nano && brew link nano
 
 ### IDE's
-brew install --cask pycharm
+brew install --cask -f pycharm
+brew install --cask -f goland
 
 ### Docker
-brew install --cask docker
+brew install --cask -f docker
 
 ### Custom HEAD only forks
 brew install fyabai --head
@@ -65,34 +65,32 @@ brew install fnnn --head # nnn fork (changed colors, keymappings)
 ## Casks
 echo "Installing Brew Casks..."
 ### Terminals & Browsers
-brew install --cask alacritty
-brew install --cask kitty
-brew install --cask brave-browser
+brew install --cask -f brave-browser
 
 ### Pentest
-brew install --cask burp-suite
+brew install --cask -f burp-suite
 
 ### Messenger
-brew install --cask discord
-brew install --cask signal
-brew install --cask telegram
-brew install --cask whatsapp
-brew install --cask readdle-spark # E-Mail
+brew install --cask -f discord
+brew install --cask -f signal
+brew install --cask -f telegram
+brew install --cask -f whatsapp
+brew install --cask -f readdle-spark # E-Mail
 
 ### Reversing
-brew install --cask machoview
-brew install --cask hex-fiend
+brew install --cask -f machoview
+brew install --cask -f hex-fiend
 
 ### Nice to have
-brew install --cask alfred
-brew install --cask spotify
-brew install --cask visual-studio-code
+brew install --cask -f alfred
+brew install --cask -f spotify
+brew install --cask -f visual-studio-code
 
 ### Fonts
-brew install --cask sf-symbols
-brew install --cask font-hack-nerd-font
-brew install --cask font-jetbrains-mono
-brew install --cask font-fira-code
+brew install --cask -f sf-symbols
+brew install --cask -f font-hack-nerd-font
+brew install --cask -f font-jetbrains-mono
+brew install --cask -f font-fira-code
 
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
@@ -165,7 +163,7 @@ rm -rf /tmp/simple-completion-language-server
 # Start Services
 echo "Starting Services (grant permissions)..."
 brew services start skhd
-brew services start fyabai
+brew services start yabai
 brew services start sketchybar
 brew services start borders
 brew services start svim
